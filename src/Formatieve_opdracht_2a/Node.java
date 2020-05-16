@@ -1,7 +1,40 @@
 package Formatieve_opdracht_2a;
 
-import java.util.ArrayList;
 
+
+public class Node {
+    String name; // defining the states
+    Node pathA;// defining the path A
+    Node pathB;// defining the path B
+
+    public Node(String n){
+        name =n;
+    }
+
+
+
+
+    public void setNodeOnPathA(Node node)
+    {
+        pathA =  node;
+    }
+
+    public void setNodeOnPathB(Node node)
+    {
+        pathB  = node;
+    }
+
+    public String getName(){return name;}
+
+    public Node getNodeOnPathA(){return pathA;}
+    public Node getNodeOnPathB(){return pathB;}
+
+    public String toString(){
+        return name;
+    }
+
+}
+/*
 public class Node {
 //public Klant(String nm){naam = nm;}
     String string; //input string
@@ -87,7 +120,9 @@ public class Node {
         else
             System.out.println(nodes);
 
-    }
+    }*/
+
+
 
 
 
@@ -152,4 +187,4 @@ public class Node {
     }
 
      */
-}
+
