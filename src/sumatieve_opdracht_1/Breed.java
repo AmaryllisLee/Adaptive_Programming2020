@@ -1,8 +1,15 @@
 package sumatieve_opdracht_1;
 
 public class Breed {
-    private String breed;
+    private String breedname;
 
-    public String getBreed(){return breed;}
-    public void setBreed(String b){breed = b;}
+    public Breed(String bn){
+        breedname = bn;
+    }
+    public String getBreedname(){return breedname;}
+    public void setBreedname(String b){breedname = b;}
+
+    public String toString(){
+        return breedname;
+    }
 }
