@@ -1,4 +1,4 @@
-package Formatieve_opdracht_1a_Autoverhuur_Gameswinkel;
+package Formatieve_opdracht_1a_Autoverhuur_Gameswinkel.AutohuurFile;
 
 public class Klant {
     private String naam;
