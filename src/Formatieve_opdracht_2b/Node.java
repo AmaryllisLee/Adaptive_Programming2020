@@ -14,8 +14,7 @@ public class Node {
     }
 
     //Method to add node paths to array nodes
-    public void setPath(Node n, Double probability){
-        nodes.put(n.state, probability);
+    public void setPath(Node n, Double probability){nodes.put(n.getState(), probability);
     }
 
     public HashMap getHMapofPath(){return nodes;} //get array nodes

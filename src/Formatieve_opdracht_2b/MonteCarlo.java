@@ -16,7 +16,7 @@ public class MonteCarlo {
         Node s1 = new Node("s1");
         Node s2 = new Node("s2");
         Node s3 = new Node("s3");
-        Node s4 = new Node("s3");
+        Node s4 = new Node("s4");
         Node s5 = new Node("s5");
         Node s6 = new Node("s6");
 
@@ -32,10 +32,14 @@ public class MonteCarlo {
         s0.setPath(s1, 0.5);
         s0.setPath(s2, 0.5);
 
+
         s1.setPath(s3, 0.5);
         s1.setPath(s4, 0.5);
         s2.setPath(s5, 0.5);
         s2.setPath(s6, 0.5 );
+
+        s3.setPath(s1, 0.5);
+        s6.setPath(s1, 0.5);
 
         s3.setPath(d1, 0.5);
         s4.setPath(d2, 0.5);
@@ -48,6 +52,7 @@ public class MonteCarlo {
         Random random = new Random(); // create a instance random in order to generate a random number
 
         HashMap<String, Node> statesdiceNodes = new HashMap<String, Node>();
+
         statesdiceNodes.put("s0",s0);
         statesdiceNodes.put("s1",s1);
         statesdiceNodes.put("s2",s2);
@@ -67,17 +72,36 @@ public class MonteCarlo {
 
 
         Node currentNode = s0;
-        HashMap<String, Double> dictNode = currentNode.getHMapofPath();
+        HashMap<String, Double> dictNode = currentNode.getHMapofPath(); //
 
         System.out.println(dictNode);
-        int p = 0;
-        for (String i : dictNode.keySet()) {
+
+
+        do {
+            double p = 0;
             Double randomnumber = random.nextDouble();
-            System.out.println(currentNode.getState() + " "+ randomnumber+ " " + dictNode);
-            if ((p + dictNode.get(i)) > randomnumber){
-                currentNode = statesdiceNodes.get(i);
-            }
+            states.add(currentNode.getState());
+
+            for (String i : dictNode.keySet()) {
+
+
+                System.out.println(currentNode.getState() + " "+ randomnumber+ " " + dictNode);
+
+                if ((p + dictNode.get(i)) >= randomnumber){
+                    currentNode = statesdiceNodes.get(i);
+                    dictNode = currentNode.getHMapofPath();
+                    p = 0;
+                    break;
+                }
+                else{
+                    p  += dictNode.get(i);
+                }
         }
+
+        }while(currentNode.getHMapofPath().size() > 0);
+
+         System.out.println(states + " " + currentNode.getState());
+
 
 
 
