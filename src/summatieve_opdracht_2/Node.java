@@ -12,7 +12,7 @@ public class Node {
         badletter  = bl;
     }
 
-    public void setPathRight(Node node){ pathRight= node;} 
+    public void setPathRight(Node node){ pathRight= node;}
     public void setPathWrong(Node node){ pathWrong = node;}
 
     public Node getPathRight(){return pathRight;}
