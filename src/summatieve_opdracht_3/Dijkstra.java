@@ -11,12 +11,14 @@ public class Dijkstra{
 
         ArrayList<Node> settlednode = new ArrayList<Node>();
 
-        Node evaluationnode = null;
+        Node evaluationnode = null; // startnode
 
-        unsettlednode.peek().setAmount(0);// set the start node to 0
+        unsettlednode.peek().setAmount(0); // set the start node to 0
+
         LinkedList<Node> initialShortestPath = new LinkedList<Node>();
-        initialShortestPath.add(unsettlednode.peek());
-        unsettlednode.peek().setShortestPath(initialShortestPath);// peek() get head of the priorityqueu
+        initialShortestPath.add(unsettlednode.peek());// peek() : get head of the  Priority Queu
+
+        unsettlednode.peek().setShortestPath(initialShortestPath);
 
         while(unsettlednode.size() > 0) {
             evaluationnode = unsettlednode.poll();

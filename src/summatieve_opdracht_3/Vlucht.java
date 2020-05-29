@@ -4,10 +4,10 @@ import java.util.HashMap;
 
 public class Vlucht extends Stap {
     Integer  euro;
-    Integer kansBagageKwijt;
+    Double kansBagageKwijt;
 
 
-    public Vlucht(Node startn, Node endn, Integer euro, Integer kansBagageKwijt){
+    public Vlucht(Node startn, Node endn, Integer euro, Double kansBagageKwijt){
         super(startn, endn);
         this.euro = euro;
         this.kansBagageKwijt = kansBagageKwijt;
@@ -15,6 +15,7 @@ public class Vlucht extends Stap {
 
     @Override
     Integer getValue() {
-        return (int) euro * kansBagageKwijt;
+        Integer cost =(int) Math.round(euro * (1+kansBagageKwijt));
+        return cost;
     }
 }

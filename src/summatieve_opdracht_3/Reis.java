@@ -1,6 +1,5 @@
 package summatieve_opdracht_3;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.LinkedList;
 
@@ -14,8 +13,11 @@ public class Reis implements Comparable<Reis> {
 
         Integer sumDistance = 0;
         for(int i = 0;i< nodes.size() -1;i++ ){
+
             ArrayList<Stap> stapRoute = nodes.get(i).getStapRoutes();
+
             boolean st =false;
+
             for (int j = 0;j < stapRoute.size();j++){
                 Stap stap = stapRoute.get(j);
                 if (stap.getStartnode() == nodes.get(i) && stap.getEndnode() == nodes.get(i+1)){
@@ -50,7 +52,7 @@ public class Reis implements Comparable<Reis> {
 
 
 
-    //https://stackoverflow.com/questions/6952660/java-priority-queue-reordering-when-editing-elements?lq=1
+    //Bron : https://stackoverflow.com/questions/6952660/java-priority-queue-reordering-when-editing-elements?lq=1
 
 
 

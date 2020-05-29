@@ -6,7 +6,9 @@ public class Treinrit extends Stap{
    Integer duration ;
 
 
-   public Treinrit(Node startn, Node endn, Integer duration){super(startn, endn);this.duration = duration;}
+   public Treinrit(Node startn, Node endn, Integer duration){
+      super(startn, endn);
+      this.duration = duration;}
 
    @Override
    Integer getValue() {

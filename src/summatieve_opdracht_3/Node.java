@@ -14,10 +14,13 @@ public class Node {
 
     private ArrayList<Stap> stapRoutes = new ArrayList<Stap>();//path
 
-    public Node (String name){this.name = name;}
+    public Node (String name){
+        this.name = name;
+    }
 
     //getter/setter
     public String getName() {
+
         return name;
     }
 
@@ -26,6 +29,7 @@ public class Node {
     }
 
     public int getAmount() {
+
         return amount;
     }
 
@@ -33,11 +37,9 @@ public class Node {
         this.amount = amount;
     }
 
-    public void addPath(Stap s){
-        this.stapRoutes.add(s);
+    public ArrayList<Stap> getStapRoutes(){
+        return stapRoutes;
     }
-
-    public ArrayList<Stap> getStapRoutes(){return stapRoutes;}
 
     public LinkedList<Node> getShortestPath() {
         return shortestPath;
@@ -45,6 +47,10 @@ public class Node {
 
     public void setShortestPath(LinkedList<Node> shortestPath) {
         this.shortestPath = shortestPath;
+    }
+
+    public void addPath(Stap s){
+        this.stapRoutes.add(s);
     }
 
     public String toString(){

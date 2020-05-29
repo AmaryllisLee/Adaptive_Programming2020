@@ -16,32 +16,18 @@ public abstract class Stap {
 
 
     public Node getStartnode() {
+
         return startnode;
     }
 
 
     public Node getEndnode() {
+
         return endnode;
     }
 }
 
 
-
-
-
-
-
-
-    /*
-
-    public void setrouteDestination(Stap s, Integer n ){
-        this.stapRoutes.put(s, n);
-    }
-
-    public HashMap getrouteDestination(){return stapRoutes;}
-
-
-     */
 
 
 
