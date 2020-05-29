@@ -2,11 +2,11 @@ package summatieve_opdracht_3;
 
 import org.junit.Assert;
 import org.junit.Test;
-import sun.awt.image.ImageWatched;
+
 
 import java.util.LinkedList;
 
-import static org.junit.Assert.*;
+
 
 public class ReisTest {
 
@@ -18,7 +18,7 @@ public class ReisTest {
     Node tf = new Node("F");
 
 
-    Stap tab = new  Treinrit(ta, tb, 10);
+    Stap tab = new Treinrit(ta, tb, 10);
     Stap tac = new Treinrit (ta, tc, 15);
     Stap tbf= new Treinrit (tb, tf, 15);
     Stap tbd = new Treinrit (tb, td, 12);

@@ -2,9 +2,9 @@ package summatieve_opdracht_3;
 
 import org.junit.Assert;
 import org.junit.Test;
-import sumatieve_opdracht_1.Animal;
 
-import static org.junit.Assert.*;
+
+
 
 public class VluchtTest {
 
