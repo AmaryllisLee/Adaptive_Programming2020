@@ -52,8 +52,9 @@ public class Reis implements Comparable<Reis> {
 
 
 
-    //Bron : https://stackoverflow.com/questions/6952660/java-priority-queue-reordering-when-editing-elements?lq=1
-
+    //Bron :
+    // https://stackoverflow.com/questions/6952660/java-priority-queue-reordering-when-editing-elements?lq=1
+    //https://www.tutorialspoint.com/can-a-constructor-throw-an-exception-in-java
 
 
 

@@ -19,3 +19,6 @@ public class Vlucht extends Stap {
         return cost;
     }
 }
+
+//Bron:
+//https://www.geeksforgeeks.org/convert-double-to-integer-in-java/

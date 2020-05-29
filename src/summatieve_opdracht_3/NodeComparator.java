@@ -19,5 +19,6 @@ public class NodeComparator implements Comparator<Node> {
         }
     }
 
-
+//Bron:
+// https://www.geeksforgeeks.org/implement-priorityqueue-comparator-java/
 }

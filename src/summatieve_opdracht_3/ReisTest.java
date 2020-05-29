@@ -51,13 +51,8 @@ public class ReisTest {
         }catch (Exception fout){
             System.out.println(fout.getMessage());
         }
-
-
-
-
-
-
-
-
     }
 }
+
+//Bron:
+//https://examples.javacodegeeks.com/core-java/junit/junit-test-constructor-example/

@@ -47,3 +47,7 @@ public class Dijkstra{
     }
 
 }
+
+//Bronnen :
+//https://www.geeksforgeeks.org/clone-method-in-java-2/ - clone()
+//https://docs.oracle.com/javase/7/docs/api/java/util/PriorityQueue.html

@@ -26,6 +26,8 @@ public abstract class Stap {
         return endnode;
     }
 }
+//Bron:
+//https://docs.oracle.com/javase/tutorial/java/IandI/abstract.html
 
 
 
