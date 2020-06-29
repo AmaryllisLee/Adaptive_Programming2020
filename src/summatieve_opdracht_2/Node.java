@@ -1,27 +1,31 @@
 package summatieve_opdracht_2;
 
-public class Node {
-    private String goodletter;
-    private String badletter;
+import java.util.HashMap;
 
-    private Node pathRight;
-    private Node pathWrong;
+public abstract class Node {
+    private String name;
+    HashMap<Node, Object> nodes = new HashMap<>();
 
-    Node(String gl, String bl){
-        goodletter = gl;
-        badletter  = bl;
+    Node(String n){
+        name = n;
     }
 
-    public void setPathRight(Node node){ pathRight= node;}
-    public void setPathWrong(Node node){ pathWrong = node;}
+    public abstract Boolean addPath(Node node, Object value);
 
-    public Node getPathRight(){return pathRight;}
-    public Node getPathWrong(){return pathWrong;}
+    public String getName() {
+        return name;
+    }
 
-    public String getGoodletter(){return goodletter;}
-    public String getBadletter(){return badletter;}
+    public void setName(String name) {
+        this.name = name;
+    }
 
+    public HashMap<Node, Object> getNodes() {
+        return nodes;
+    }
 
-
+    public void setNodes(HashMap<Node, Object> nodes) {
+        this.nodes = nodes;
+    }
 
 }
