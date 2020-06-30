@@ -5,7 +5,7 @@ import org.junit.Assert;
 import static org.junit.Assert.*;
 
 public class NodeTest {
-
+/*
     @org.junit.Test
     public void setPathRight() throws Exception {
         Node node = new Node("0", "0");
@@ -57,6 +57,8 @@ public class NodeTest {
 
         assertEquals("6", node.getBadletter());
     }
+
+ */
 }
 
 //https://www.youtube.com/watch?v=Bld3644bIAo -- bron voor junit testing

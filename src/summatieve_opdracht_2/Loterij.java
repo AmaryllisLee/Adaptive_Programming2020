@@ -1,6 +1,6 @@
 package summatieve_opdracht_2;
 
-import java.time.LocalDate;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Scanner;
@@ -9,31 +9,29 @@ import java.util.Scanner;
 public class Loterij {
     private int numbersTopick;
     private ChanceNode startnode;
+    private ChanceNode currentnode;
 
 
     public ArrayList<String> pickNumber(){
-        //Define word
-
-        Scanner obj = new Scanner(System.in);
-        String keuze = obj.nextLine();
-        String[] keuzesplit = keuze.split(" ");
-
+        numbersTopick = 10;
         ArrayList<String>unique_keuzesplit = new ArrayList<>();
-        for(int i= 0; i < keuzesplit.length - 1; i++){
-            if (!unique_keuzesplit.contains(keuzesplit[i])){
-                if (Integer.parseInt(keuzesplit[i]) > 0 && Integer.parseInt(keuzesplit[i]) <= numbersTopick ){
-                unique_keuzesplit.add(keuzesplit[i]);
-                }
-            }
-        }//end of for loop
 
-        if (unique_keuzesplit.size() != 3){
-            return null;
-        }
-        else{
-            return unique_keuzesplit;
-        }
+        do{
+            Scanner obj = new Scanner(System.in);
+            String keuze = obj.nextLine(); // input numbers
+            String[] keuzesplit = keuze.split(" ");
+
+            for(int i= 0; i <= keuzesplit.length - 1; i++){
+                if (!unique_keuzesplit.contains(keuzesplit[i])){
+                    if (Integer.parseInt(keuzesplit[i]) > 0 && Integer.parseInt(keuzesplit[i]) <= numbersTopick ){
+                        unique_keuzesplit.add(keuzesplit[i]);
+                    }
+                }
+            }//end of for loop
+        }while(unique_keuzesplit.size() != 3);
+        return unique_keuzesplit;
     }
+
 
     public void  createFSM(){
         startnode = new ChanceNode("start");
@@ -58,6 +56,22 @@ public class Loterij {
 
         }
     }
+
+
+    public void createFSMrecursive(ChanceNode currentnode, int depth, ArrayList<ChanceNode> pathtome){
+        for (int i = 1; i <= 10; i++){
+            if (!pathtome.contains(i)){
+                ChanceNode newnode = new ChanceNode(String.valueOf(i));
+                currentnode.addPath(newnode, i/(10-depth));
+
+                if (depth <= 3){
+                    pathtome.add(currentnode);
+                    createFSMrecursive(newnode, depth +1, pathtome);
+                }
+            }
+        }
+    }
+
 
 
 
