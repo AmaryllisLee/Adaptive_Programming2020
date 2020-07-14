@@ -110,7 +110,7 @@ public class Loterij {
         return winnerTicket;
     }
 
-    static Boolean winnerLoser(ArrayList<String> arrayList1, ArrayList<String> arrayList2 ){
+    static boolean winnerLoser(ArrayList<String> arrayList1, ArrayList<String> arrayList2 ){
        return arrayList1.containsAll(arrayList2);
 
     }

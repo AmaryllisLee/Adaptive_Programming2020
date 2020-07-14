@@ -14,7 +14,7 @@ public class Hangman {
         HashMap<String, TekstNode> states = hangman.putPath_states(word, define_states);
 
         ArrayList<TekstNode> result = hangman.playHangman(word,states);
-        String winnerLoser = hangman.aliveOrdead(result,  word);
+        String winnerLoser = hangman.aliveOrdead(result);
         System.out.println(winnerLoser);
     }
 
@@ -129,7 +129,7 @@ public class Hangman {
         return result;
     }
 
-    public String aliveOrdead(ArrayList<TekstNode> result, ArrayList<Character> word){
+    public String aliveOrdead(ArrayList<TekstNode> result){
         //Determine if player won or lost
         if (result.get(result.size()-1).getName().equals("WIN")){
             //result.add(currentnode.getName());
