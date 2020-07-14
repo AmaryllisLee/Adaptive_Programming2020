@@ -16,4 +16,6 @@ public class TekstNode extends Node{
         }
         return false;
     }
+
+
 }

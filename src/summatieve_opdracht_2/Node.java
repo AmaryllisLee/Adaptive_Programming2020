@@ -4,13 +4,14 @@ import java.util.HashMap;
 
 public abstract class Node {
     private String name;
-    HashMap<Node, Object> nodes = new HashMap<>();
+    protected HashMap<Node, Object> nodes = new HashMap<>();
 
     Node(String n){
         name = n;
     }
 
     public abstract Boolean addPath(Node node, Object value);
+
 
     public String getName() {
         return name;
